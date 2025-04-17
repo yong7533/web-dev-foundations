@@ -4,224 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS 練習</title>
-
-    <!-- 
-    步驟一：引入 Tailwind CSS
-    請將以下程式碼加入到 head 標籤中：
-    <script src="https://cdn.tailwindcss.com"></script> 
-
-    步驟二：
-    1. 前往 Tailwind CSS 官方文件：https://tailwindcss.com/docs
-    2. 學習如何使用 Tailwind 的 utility classes
-    3. 透過添加適當的 class 來設計網頁樣式
-    -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="bg-gray-50 text-gray-800">
     <!-- 導航列 -->
-    <nav>
-      <div>
+    <nav class="py-4 px-6 border-b mb-12 bg-white shadow-md sticky top-0 z-50">
+      <div class="flex justify-between items-center">
         <img src="https://placehold.jp/100x50.png" alt="Logo" />
-        <ul>
-          <li><a href="#">首頁</a></li>
-          <li><a href="#">關於我們</a></li>
-          <li><a href="#">服務項目</a></li>
-          <li><a href="#">聯絡資訊</a></li>
+        <ul class="flex gap-x-6 text-lg font-medium">
+          <li><a href="#" class="hover:text-blue-500">首頁</a></li>
+          <li><a href="#" class="hover:text-blue-500">關於我們</a></li>
+          <li><a href="#" class="hover:text-blue-500">服務項目</a></li>
+          <li><a href="#" class="hover:text-blue-500">聯絡資訊</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- 首頁橫幅 -->
-    <header>
-      <h1>探索 Tailwind CSS 的魅力</h1>
-      <p>透過實作學習現代化的 CSS 框架</p>
-      <div>
-        <button>開始學習</button>
-        <button>觀看教學</button>
+    <header class="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-16">
+      <h1 class="text-4xl font-extrabold mb-4">探索 Tailwind CSS 的魅力</h1>
+      <p class="text-lg mb-6">透過實作學習現代化的 CSS 框架</p>
+      <div class="flex justify-center gap-4">
+        <button class="bg-white text-blue-500 font-bold py-2 px-4 rounded shadow hover:bg-gray-100">開始學習</button>
+        <button class="bg-blue-700 text-white font-bold py-2 px-4 rounded shadow hover:bg-blue-800">觀看教學</button>
       </div>
     </header>
 
     <!-- 主要內容區 -->
     <main>
       <!-- 特色介紹 -->
-      <section>
-        <h2>為什麼選擇我們？</h2>
-        <div>
-          <div>
-            <img src="https://placehold.jp/150x150.png" alt="圖示 1" />
-            <h3>快速開發</h3>
-            <p>使用 Utility-First 的方法，加速開發流程</p>
+      <section class="max-w-5xl mx-auto border-b-4 pb-12 mb-16">
+        <h2 class="text-center font-bold text-3xl text-orange-800 pb-4">為什麼選擇我們？</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/150x150.png" alt="圖示 1" />
+            <div class="p-6">
+              <h3 class="pb-2 border-b-2 font-semibold text-lg">快速開發</h3>
+              <p class="text-gray-600">使用 Utility-First 的方法，加速開發流程</p>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/150x150.png" alt="圖示 2" />
-            <h3>響應式設計</h3>
-            <p>輕鬆打造適配各種螢幕尺寸的網站</p>
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/150x150.png" alt="圖示 2" />
+            <div class="p-6">
+              <h3 class="pb-2 border-b-2 font-semibold text-lg">響應式設計</h3>
+              <p class="text-gray-600">輕鬆打造適配各種螢幕尺寸的網站</p>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/150x150.png" alt="圖示 3" />
-            <h3>客製化設計</h3>
-            <p>依據需求打造獨特的使用者介面</p>
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/150x150.png" alt="圖示 3" />
+            <div class="p-6">
+              <h3 class="pb-2 border-b-2 font-semibold text-lg">客製化設計</h3>
+              <p class="text-gray-600">依據需求打造獨特的使用者介面</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 產品展示 -->
-      <section>
-        <h2>熱門課程</h2>
-        <div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 1" />
-            <h3>HTML 基礎教學</h3>
-            <p>學習網頁結構的基本元素</p>
-            <p>課程時長：2 小時</p>
-            <button>立即報名</button>
+      <section class="max-w-5xl mx-auto mb-16">
+        <h2 class="text-center font-bold text-3xl text-blue-800 pb-8">熱門課程</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/300x200.png" alt="課程 1" />
+            <div class="p-6">
+              <h3 class="font-semibold text-lg">HTML 基礎教學</h3>
+              <p class="text-gray-600">學習網頁結構的基本元素</p>
+              <p class="text-sm text-gray-500">課程時長：2 小時</p>
+              <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">立即報名</button>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 2" />
-            <h3>CSS 樣式設計</h3>
-            <p>掌握網頁設計的核心技巧</p>
-            <p>課程時長：3 小時</p>
-            <button>立即報名</button>
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/300x200.png" alt="課程 2" />
+            <div class="p-6">
+              <h3 class="font-semibold text-lg">CSS 樣式設計</h3>
+              <p class="text-gray-600">掌握網頁設計的核心技巧</p>
+              <p class="text-sm text-gray-500">課程時長：3 小時</p>
+              <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">立即報名</button>
+            </div>
           </div>
-          <div>
-            <img src="https://placehold.jp/300x200.png" alt="課程 3" />
-            <h3>JavaScript 互動程式</h3>
-            <p>為網頁添加豐富的互動效果</p>
-            <p>課程時長：4 小時</p>
-            <button>立即報名</button>
+          <div class="border rounded-lg shadow-md bg-white">
+            <img class="w-full" src="https://placehold.jp/300x200.png" alt="課程 3" />
+            <div class="p-6">
+              <h3 class="font-semibold text-lg">JavaScript 互動程式</h3>
+              <p class="text-gray-600">為網頁添加豐富的互動效果</p>
+              <p class="text-sm text-gray-500">課程時長：4 小時</p>
+              <button class="mt-4 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">立即報名</button>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 用戶見證 -->
-      <section>
-        <h2>學員心得</h2>
-        <div>
-          <div>
-            <img src="https://placehold.jp/100x100.png" alt="用戶頭像 1" />
-            <p>「透過這個課程，我學會了如何有效率地開發網站。」</p>
-            <p>- 王小明</p>
+      <section class="max-w-5xl mx-auto mb-16">
+        <h2 class="text-center font-bold text-3xl text-green-800 pb-8">學員心得</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <img class="w-24 h-24 mx-auto rounded-full" src="https://placehold.jp/100x100.png" alt="用戶頭像 1" />
+            <p class="italic text-gray-600 mt-4">「透過這個課程，我學會了如何有效率地開發網站。」</p>
+            <p class="font-bold mt-2">- 王小明</p>
           </div>
-          <div>
-            <img src="https://placehold.jp/100x100.png" alt="用戶頭像 2" />
-            <p>「課程內容非常實用，讓我能夠快速上手。」</p>
-            <p>- 李小華</p>
+          <div class="text-center">
+            <img class="w-24 h-24 mx-auto rounded-full" src="https://placehold.jp/100x100.png" alt="用戶頭像 2" />
+            <p class="italic text-gray-600 mt-4">「課程內容非常實用，讓我能夠快速上手。」</p>
+            <p class="font-bold mt-2">- 李小華</p>
           </div>
-          <div>
-            <img src="https://placehold.jp/100x100.png" alt="用戶頭像 3" />
-            <p>「老師的教學方式清晰易懂，收穫良多。」</p>
-            <p>- 張小芳</p>
+          <div class="text-center">
+            <img class="w-24 h-24 mx-auto rounded-full" src="https://placehold.jp/100x100.png" alt="用戶頭像 3" />
+            <p class="italic text-gray-600 mt-4">「老師的教學方式清晰易懂，收穫良多。」</p>
+            <p class="font-bold mt-2">- 張小芳</p>
           </div>
         </div>
       </section>
 
       <!-- 註冊表單 -->
-      <section>
-        <h2>立即註冊</h2>
-        <form>
-          <div>
-            <label for="name">姓名：</label>
-            <input type="text" id="name" required />
+      <section class="max-w-3xl mx-auto mb-16">
+        <h2 class="text-center font-bold text-3xl text-red-800 pb-8">立即註冊</h2>
+        <form class="bg-white p-8 rounded-lg shadow-md">
+          <div class="mb-4">
+            <label for="name" class="block font-medium mb-2">姓名：</label>
+            <input type="text" id="name" class="w-full border rounded px-4 py-2" required />
           </div>
-          <div>
-            <label for="email">電子郵件：</label>
-            <input type="email" id="email" required />
+          <div class="mb-4">
+            <label for="email" class="block font-medium mb-2">電子郵件：</label>
+            <input type="email" id="email" class="w-full border rounded px-4 py-2" required />
           </div>
-          <div>
-            <label for="phone">電話：</label>
-            <input type="tel" id="phone" />
+          <div class="mb-4">
+            <label for="phone" class="block font-medium mb-2">電話：</label>
+            <input type="tel" id="phone" class="w-full border rounded px-4 py-2" />
           </div>
-          <div>
-            <label for="course">選擇課程：</label>
-            <select id="course">
+          <div class="mb-4">
+            <label for="course" class="block font-medium mb-2">選擇課程：</label>
+            <select id="course" class="w-full border rounded px-4 py-2">
               <option value="">請選擇課程</option>
               <option value="html">HTML 基礎教學</option>
               <option value="css">CSS 樣式設計</option>
               <option value="js">JavaScript 互動程式</option>
             </select>
           </div>
-          <div>
-            <label for="message">留言：</label>
-            <textarea id="message" rows="4"></textarea>
+          <div class="mb-4">
+            <label for="message" class="block font-medium mb-2">留言：</label>
+            <textarea id="message" rows="4" class="w-full border rounded px-4 py-2"></textarea>
           </div>
-          <button type="submit">送出表單</button>
+          <button type="submit" class="w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">送出表單</button>
         </form>
       </section>
     </main>
 
     <!-- 頁尾資訊 -->
-    <footer>
-      <div>
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3>關於我們</h3>
+          <h3 class="font-bold text-lg mb-4">關於我們</h3>
           <p>提供優質的網頁開發教學</p>
           <p>地址：台北市某某區某某路123號</p>
           <p>電話：(02) 1234-5678</p>
           <p>Email：info@example.com</p>
         </div>
         <div>
-          <h3>快速連結</h3>
-          <ul>
-            <li><a href="#">常見問題</a></li>
-            <li><a href="#">課程介紹</a></li>
-            <li><a href="#">購買須知</a></li>
-            <li><a href="#">聯絡我們</a></li>
+          <h3 class="font-bold text-lg mb-4">快速連結</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400">常見問題</a></li>
+            <li><a href="#" class="hover:text-blue-400">課程介紹</a></li>
+            <li><a href="#" class="hover:text-blue-400">購買須知</a></li>
+            <li><a href="#" class="hover:text-blue-400">聯絡我們</a></li>
           </ul>
         </div>
         <div>
-          <h3>追蹤我們</h3>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
+          <h3 class="font-bold text-lg mb-4">追蹤我們</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400">Facebook</a></li>
+            <li><a href="#" class="hover:text-blue-400">Instagram</a></li>
+            <li><a href="#" class="hover:text-blue-400">Twitter</a></li>
+            <li><a href="#" class="hover:text-blue-400">LinkedIn</a></li>
           </ul>
         </div>
       </div>
-      <div>
+      <div class="text-center mt-8">
         <p>&copy; 2024 網頁設計學習中心. All rights reserved.</p>
       </div>
     </footer>
-
-    <!-- 
-    練習重點：
-    1. 導航列設計
-       - 製作固定置頂的導航列
-       - 在手機版時變為漢堡選單
-
-    2. 首頁橫幅
-       - 設計全寬的橫幅背景
-       - 製作引人注目的標題樣式
-       - 設計吸引人的按鈕效果
-
-    3. 特色介紹區
-       - 使用 Grid 或 Flexbox 排列內容
-       - 加入適當的間距
-       - 設計圖示的樣式
-
-    4. 產品展示區
-       - 製作響應式的卡片布局
-       - 設計圖片的顯示方式
-       - 加入互動效果（hover）
-
-    5. 用戶見證區
-       - 設計引述樣式
-       - 適當地排列用戶資訊
-       - 製作圓形的用戶頭像
-
-    6. 註冊表單
-       - 設計表單元素的樣式
-       - 加入適當的間距
-       - 製作具有互動效果的按鈕
-
-    7. 頁尾設計
-       - 製作多欄式的頁尾布局
-       - 設計連結的樣式
-       - 適當地排列聯絡資訊
-
-    8. 響應式設計
-       - 使用 Tailwind 的響應式類別
-       - 確保在不同裝置上都有良好的顯示效果
-       - 適當調整文字大小和間距
-    -->
   </body>
 </html>
