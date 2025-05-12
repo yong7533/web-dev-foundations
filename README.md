@@ -5,7 +5,7 @@ Welcome to the **Web Development Basics** repository! This course is designed to
 ---
 
 ## **Course Outline**
-
+        "week7"
 ### **1. Development Tools**
 - **Git**
   - Learn version control basics: `git init`, `git add`, `git commit`.
